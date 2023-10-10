@@ -6,7 +6,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -46,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
 
         mostrarPregunta(); // Muestra la primera pregunta
 
-
         preguntas.add(new Pregunta("¿Cuál es la capital de Francia?", R.drawable.paris_img, "Madrid", "Roma", "París", optionButtonC.getId()));
         preguntas.add(new Pregunta("¿Cuál es el río más largo del mundo?", R.drawable.amazonas_img, "Amazonas", "Nilo", "Misisipi", optionButtonA.getId()));
         preguntas.add(new Pregunta("¿Cuál es el océano más grande del mundo?", R.drawable.pacific_img, "Océano Pacífico", "Océano Atlántico", "Océano Índico", optionButtonA.getId()));
         preguntas.add(new Pregunta("¿Cuál es el monte más alto del mundo?", R.drawable.everest_img, "Monte Everest", "Monte Kilimanjaro", "Monte McKinley", optionButtonA.getId()));
         preguntas.add(new Pregunta("¿Cuál es el continente más poblado del mundo?", R.drawable.asia_img, "Asia", "África", "Europa", optionButtonA.getId()));
+        preguntas.add(new Pregunta("¿Quién es esta actriz?", R.drawable.cameron, "Ana de Armas", "Cameron Diaz", "Margot Robbie", optionButtonB.getId()));
 
     }
 
@@ -66,21 +69,25 @@ public class MainActivity extends AppCompatActivity {
             optionButtonA.setVisibility(View.GONE); // Oculta los botones de opciones
             optionButtonB.setVisibility(View.GONE);
             optionButtonC.setVisibility(View.GONE);
-            textViewOptionA.setVisibility(View.GONE);
+            textViewOptionA.setVisibility(View.GONE); // Oculta los tedxtos de opciones
             textViewOptionB.setVisibility(View.GONE);
             textViewOptionC.setVisibility(View.GONE);
         }
     }
 
-
     private void configurarPregunta(Pregunta pregunta) {
         textViewPregunta.setText(pregunta.getPregunta());
         imageView.setImageResource(pregunta.getIdImagen());
-        textViewOptionA.setText(pregunta.getOpcionA()); // Usa las opciones reales
+        textViewOptionA.setText(pregunta.getOpcionA());
         textViewOptionB.setText(pregunta.getOpcionB());
         textViewOptionC.setText(pregunta.getOpcionC());
 
-        optionButtonA.setOnClickListener(view -> comprobarRespuesta(pregunta, optionButtonA));
+        optionButtonA.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                comprobarRespuesta(pregunta, optionButtonA);
+            }
+        });
+
         optionButtonB.setOnClickListener(view -> comprobarRespuesta(pregunta, optionButtonB));
         optionButtonC.setOnClickListener(view -> comprobarRespuesta(pregunta, optionButtonC));
     }
