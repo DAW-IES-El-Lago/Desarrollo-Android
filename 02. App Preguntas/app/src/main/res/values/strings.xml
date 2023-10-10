@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">paisesProj</string>
+    <string name="TituloActivityMain">Pregunta2</string>
+    <string name="optionButtonAContent">A</string>
+    <string name="optionButtonBContent">B</string>
+    <string name="optionButtonCContent">C</string>
+    <string name="textViewOptionA">Spain</string>
+    <string name="textViewOptionB">Germany</string>
+    <string name="textViewOptionC">Japan</string>
+    <string name="descripcionimagen">nombre del pais</string>
+    <string name="textviewPreguntaActual">Que pais es este?</string>
+    <string name="textviewResultCorrect">Correcto</string>
+    <string name="textviewResultIncorrect">Incorrecto</string>
+</resources>
