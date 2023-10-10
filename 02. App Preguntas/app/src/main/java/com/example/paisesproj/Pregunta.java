@@ -1,37 +1,13 @@
 package com.example.paisesproj;
 
 public class Pregunta {
+
     public String getPregunta() {
         return pregunta;
     }
 
     public void setPregunta(String pregunta) {
         this.pregunta = pregunta;
-    }
-
-    private String pregunta;
-    private int idPregunta;
-    private int idImagen;
-    private int idOpcion1;
-    private int idOpcion2;
-    private int idOpcion3;
-    private int idRespuestaCorrecta;
-
-    public Pregunta(int idPregunta, int idImagen, int idOpcion1, int idOpcion2, int idOpcion3, int idRespuestaCorrecta) {
-        this.idPregunta = idPregunta;
-        this.idImagen = idImagen;
-        this.idOpcion1 = idOpcion1;
-        this.idOpcion2 = idOpcion2;
-        this.idOpcion3 = idOpcion3;
-        this.idRespuestaCorrecta = idRespuestaCorrecta;
-    }
-
-    public int getIdPregunta() {
-        return idPregunta;
-    }
-
-    public void setIdPregunta(int idPregunta) {
-        this.idPregunta = idPregunta;
     }
 
     public int getIdImagen() {
@@ -42,35 +18,52 @@ public class Pregunta {
         this.idImagen = idImagen;
     }
 
-    public int getIdOpcion1() {
-        return idOpcion1;
+    private String pregunta;
+        private int idImagen;
+        private String opcionA;
+        private String opcionB;
+        private String opcionC;
+        private int respuestaCorrecta;
+
+    // Métodos getter y setter
+        public Pregunta(String pregunta, int idImagen, String opcionA, String opcionB, String opcionC, int respuestaCorrecta) {
+            this.pregunta = pregunta;
+            this.idImagen = idImagen;
+            this.opcionA = opcionA;
+            this.opcionB = opcionB;
+            this.opcionC = opcionC;
+            this.respuestaCorrecta = respuestaCorrecta;
+        }
+
+    public String getOpcionA() {
+        return opcionA;
     }
 
-    public void setIdOpcion1(int idOpcion1) {
-        this.idOpcion1 = idOpcion1;
+    public void setOpcionA(String opcionA) {
+        this.opcionA = opcionA;
     }
 
-    public int getIdOpcion2() {
-        return idOpcion2;
+    public String getOpcionB() {
+        return opcionB;
     }
 
-    public void setIdOpcion2(int idOpcion2) {
-        this.idOpcion2 = idOpcion2;
+    public void setOpcionB(String opcionB) {
+        this.opcionB = opcionB;
     }
 
-    public int getIdOpcion3() {
-        return idOpcion3;
+    public String getOpcionC() {
+        return opcionC;
     }
 
-    public void setIdOpcion3(int idOpcion3) {
-        this.idOpcion3 = idOpcion3;
+    public void setOpcionC(String opcionC) {
+        this.opcionC = opcionC;
     }
 
-    public int getIdRespuestaCorrecta() {
-        return idRespuestaCorrecta;
+    public int getRespuestaCorrecta() {
+        return respuestaCorrecta;
     }
 
-    public void setIdRespuestaCorrecta(int idRespuestaCorrecta) {
-        this.idRespuestaCorrecta = idRespuestaCorrecta;
+    public void setRespuestaCorrecta(int respuestaCorrecta) {
+        this.respuestaCorrecta = respuestaCorrecta;
     }
 }

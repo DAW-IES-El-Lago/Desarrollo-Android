@@ -40,95 +40,55 @@ public class MainActivity extends AppCompatActivity {
 
         // Lista de preguntas
         preguntas = new ArrayList<>();
-        preguntas.add(new Pregunta(
-                textViewPregunta.getId(),
-                imageView.getId(),
-                textViewOptionA.getId(),
-                textViewOptionB.getId(),
-                textViewOptionC.getId(),
-                textViewOptionA.getId()
-        ));
+        preguntas.add(new Pregunta("Cual es la Capital de Alemania?", R.drawable.berlin_img, "Munich", "Berlin", "Frankfurt", optionButtonB.getId()));
 
-        //Segunda pregunta
-        Pregunta nuevaPregunta = new Pregunta(
-                textViewPregunta.getId(),
-                imageView.getId(),
-                textViewOptionA.getId(),
-                textViewOptionB.getId(),
-                textViewOptionC.getId(),
-                textViewOptionC.getId()
-        );
+        preguntaActualIndex = 0; // Inicializa el índice de la pregunta actual
 
-        nuevaPregunta.setPregunta("¿Cuál es la capital de Alemania?");
-        nuevaPregunta.setIdImagen(R.drawable.berlin_img);
-        nuevaPregunta.setIdOpcion1(optionButtonA.getId());
-        nuevaPregunta.setIdOpcion2(optionButtonB.getId());
-        nuevaPregunta.setIdOpcion3(optionButtonC.getId());
-        nuevaPregunta.setIdRespuestaCorrecta(optionButtonB.getId());
-
-        preguntas.add(nuevaPregunta);
-
-        //Tercera pregunta
-        Pregunta terceraPregunta = new Pregunta(
-                textViewPregunta.getId(),
-                imageView.getId(),
-                textViewOptionA.getId(),
-                textViewOptionB.getId(),
-                textViewOptionC.getId(),
-                textViewOptionC.getId()
-        );
-
-        //bindear los botones y respuesta correcta
-        terceraPregunta.setPregunta("¿Qué montaña es esa?");
-        terceraPregunta.setIdImagen(R.drawable.japan_img);
-        terceraPregunta.setIdOpcion1(optionButtonA.getId());
-        terceraPregunta.setIdOpcion2(optionButtonB.getId());
-        terceraPregunta.setIdOpcion3(optionButtonC.getId());
-        terceraPregunta.setIdRespuestaCorrecta(optionButtonC.getId());
-
-        //cambiar las opciones no esta disponible
-
-        preguntas.add(terceraPregunta);
+        mostrarPregunta(); // Muestra la primera pregunta
 
 
-        //cuarta pregunta
-        Pregunta cuartaPregunta = new Pregunta(4, R.drawable.cameron, textViewOptionA.getId(), textViewOptionB.getId(), textViewOptionC.getId(), textViewOptionC.getId());
-        cuartaPregunta.setPregunta("Qien es ella?");
-        preguntas.add(cuartaPregunta);
+        preguntas.add(new Pregunta("¿Cuál es la capital de Francia?", R.drawable.paris_img, "Madrid", "Roma", "París", optionButtonC.getId()));
+        preguntas.add(new Pregunta("¿Cuál es el río más largo del mundo?", R.drawable.amazonas_img, "Amazonas", "Nilo", "Misisipi", optionButtonA.getId()));
+        preguntas.add(new Pregunta("¿Cuál es el océano más grande del mundo?", R.drawable.pacific_img, "Océano Pacífico", "Océano Atlántico", "Océano Índico", optionButtonA.getId()));
+        preguntas.add(new Pregunta("¿Cuál es el monte más alto del mundo?", R.drawable.everest_img, "Monte Everest", "Monte Kilimanjaro", "Monte McKinley", optionButtonA.getId()));
+        preguntas.add(new Pregunta("¿Cuál es el continente más poblado del mundo?", R.drawable.asia_img, "Asia", "África", "Europa", optionButtonA.getId()));
 
-
-        // Configurar los clicks de botones solo llaman el metodo verificarRespuesta que evalua si son correcta y suma los aciertos/errores
-        optionButtonA.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                verificarRespuesta(textViewOptionA.getId());
-            }
-        });
-
-        optionButtonB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                verificarRespuesta(textViewOptionB.getId());
-            }
-        });
-
-        optionButtonC.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                verificarRespuesta(textViewOptionC.getId());
-            }
-        });
     }
 
     private void mostrarPregunta() {
-        Pregunta preguntaActual = preguntas.get(preguntaActualIndex);
-        textViewPregunta.setText(preguntaActual.getPregunta());
-        imageView.setImageDrawable(getDrawable(preguntaActual.getIdImagen()));
+        if (preguntaActualIndex < preguntas.size()) {
+            Pregunta preguntaActual = preguntas.get(preguntaActualIndex);
+            configurarPregunta(preguntaActual);
+        } else {
+            // Has completado todas las preguntas
+            textViewPregunta.setText("Aciertos: " + contadorAciertos + " | Errores: " + contadorErrores);
+            imageView.setVisibility(View.GONE); // Oculta la imagen
+            optionButtonA.setVisibility(View.GONE); // Oculta los botones de opciones
+            optionButtonB.setVisibility(View.GONE);
+            optionButtonC.setVisibility(View.GONE);
+            textViewOptionA.setVisibility(View.GONE);
+            textViewOptionB.setVisibility(View.GONE);
+            textViewOptionC.setVisibility(View.GONE);
+        }
     }
 
-    private void verificarRespuesta(int idOpcionSeleccionada) {
-        Pregunta preguntaActual = preguntas.get(preguntaActualIndex);
-        if (preguntaActual.getIdRespuestaCorrecta() == idOpcionSeleccionada) {
+
+    private void configurarPregunta(Pregunta pregunta) {
+        textViewPregunta.setText(pregunta.getPregunta());
+        imageView.setImageResource(pregunta.getIdImagen());
+        textViewOptionA.setText(pregunta.getOpcionA()); // Usa las opciones reales
+        textViewOptionB.setText(pregunta.getOpcionB());
+        textViewOptionC.setText(pregunta.getOpcionC());
+
+        optionButtonA.setOnClickListener(view -> comprobarRespuesta(pregunta, optionButtonA));
+        optionButtonB.setOnClickListener(view -> comprobarRespuesta(pregunta, optionButtonB));
+        optionButtonC.setOnClickListener(view -> comprobarRespuesta(pregunta, optionButtonC));
+    }
+
+    private void comprobarRespuesta(Pregunta pregunta, Button seleccionado) {
+        int idRespuestaCorrecta = pregunta.getRespuestaCorrecta();
+
+        if (seleccionado.getId() == idRespuestaCorrecta) {
             showToast("Correcto!");
             contadorAciertos++; // Incrementa el contador de aciertos
         } else {
@@ -138,16 +98,12 @@ public class MainActivity extends AppCompatActivity {
 
         // Cambia a la siguiente pregunta
         preguntaActualIndex++;
-        if (preguntaActualIndex < preguntas.size()) {
-            mostrarPregunta();
-        } else {
-            showToast("Has completado todas las preguntas.");
-
-        }
+        mostrarPregunta(); // Muestra la siguiente pregunta
     }
-
 
     private void showToast(String mensaje) {
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
     }
+
+
 }
