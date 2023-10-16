@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">länderProj</string>
+    <string name="TituloActivityMain">Frage 2</string>
+    <string name="optionButtonAContent">A</string>
+    <string name="optionButtonBContent">B</string>
+    <string name="optionButtonCContent">C</string>
+    <string name="textViewOptionA">Spanien</string>
+    <string name="textViewOptionB">Deutschland</string>
+    <string name="textViewOptionC">Japan</string>
+    <string name="descripcionimagen">Ländername</string>
+    <string name="textviewPreguntaActual">Welches Land ist das?</string>
+    <string name="textviewResultCorrect">Richtig</string>
+    <string name="textviewResultIncorrect">Falsch</string>
+
+    <string name="question_0">Was ist die Hauptstadt von Deutschland?</string>
+    <string name="option_A_q0">München</string>
+    <string name="option_B_q0">Berlin</string>
+    <string name="option_C_q0">Hamburg</string>
+
+    <string name="question_1">Was ist die Hauptstadt von Frankreich?</string>
+    <string name="option_A_q1">Nantes</string>
+    <string name="option_B_q1">Marseille</string>
+    <string name="option_C_q1">Paris</string>
+
+    <string name="question_2">Was ist der längste Fluss der Welt?</string>
+    <string name="option_A_q2">Amazonas</string>
+    <string name="option_B_q2">Nil</string>
+    <string name="option_C_q2">Mississippi</string>
+
+    <string name="question_3">Was ist der größte Ozean der Welt?</string>
+    <string name="option_A_q3">Pazifischer Ozean</string>
+    <string name="option_B_q3">Atlantischer Ozean</string>
+    <string name="option_C_q3">Indischer Ozean</string>
+
+    <string name="question_4">Was ist der höchste Berg der Welt?</string>
+    <string name="option_A_q4">Mount Everest</string>
+    <string name="option_B_q4">Mount Kilimanjaro</string>
+    <string name="option_C_q4">Mount McKinley</string>
+
+    <string name="question_5">Was ist der bevölkerungsreichste Kontinent der Welt?</string>
+    <string name="option_A_q5">Asien</string>
+    <string name="option_B_q5">Afrika</string>
+    <string name="option_C_q5">Europa</string>
+
+    <string name="question_6">"Wer ist diese Schauspielerin?"</string>
+    <string name="option_A_q6">Ana de Armas</string>
+    <string name="option_B_q6">Cameron Diaz</string>
+    <string name="option_C_q6">Margot Robbie</string>
+</resources>

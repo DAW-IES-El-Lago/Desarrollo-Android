@@ -1,5 +1,6 @@
 package com.example.paisesproj;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,12 +23,20 @@ public class MainActivity extends AppCompatActivity {
     private int contadorAciertos = 0;
     private int contadorErrores = 0;
 
+    MediaPlayer mediaPlayerAcierto;
+    MediaPlayer mediaPlayerError;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        // Inicializa los MediaPlayer
+        mediaPlayerAcierto = MediaPlayer.create(this, R.raw.correct);
+        mediaPlayerError = MediaPlayer.create(this, R.raw.error);
 
         // Inicializamos las vistas
         textViewPregunta = findViewById(R.id.textViewPreguntas);
@@ -43,18 +52,18 @@ public class MainActivity extends AppCompatActivity {
 
         // Lista de preguntas
         preguntas = new ArrayList<>();
-        preguntas.add(new Pregunta("Cual es la Capital de Alemania?", R.drawable.berlin_img, "Munich", "Berlin", "Frankfurt", optionButtonB.getId()));
+        preguntas.add(new Pregunta(getString(R.string.question_0), R.drawable.berlin_img, getString(R.string.option_A_q0), getString(R.string.option_B_q0), getString(R.string.option_C_q0), optionButtonB.getId()));
 
         preguntaActualIndex = 0; // Inicializa el índice de la pregunta actual
 
         mostrarPregunta(); // Muestra la primera pregunta
 
-        preguntas.add(new Pregunta("¿Cuál es la capital de Francia?", R.drawable.paris_img, "Madrid", "Roma", "París", optionButtonC.getId()));
-        preguntas.add(new Pregunta("¿Cuál es el río más largo del mundo?", R.drawable.amazonas_img, "Amazonas", "Nilo", "Misisipi", optionButtonA.getId()));
-        preguntas.add(new Pregunta("¿Cuál es el océano más grande del mundo?", R.drawable.pacific_img, "Océano Pacífico", "Océano Atlántico", "Océano Índico", optionButtonA.getId()));
-        preguntas.add(new Pregunta("¿Cuál es el monte más alto del mundo?", R.drawable.everest_img, "Monte Everest", "Monte Kilimanjaro", "Monte McKinley", optionButtonA.getId()));
-        preguntas.add(new Pregunta("¿Cuál es el continente más poblado del mundo?", R.drawable.asia_img, "Asia", "África", "Europa", optionButtonA.getId()));
-        preguntas.add(new Pregunta("¿Quién es esta actriz?", R.drawable.cameron, "Ana de Armas", "Cameron Diaz", "Margot Robbie", optionButtonB.getId()));
+        preguntas.add(new Pregunta(getString(R.string.question_1), R.drawable.paris_img, getString(R.string.option_A_q1), getString(R.string.option_B_q1), getString(R.string.option_C_q1), optionButtonC.getId()));
+        preguntas.add(new Pregunta(getString(R.string.question_2), R.drawable.amazonas_img, getString(R.string.option_A_q2), getString(R.string.option_B_q2), getString(R.string.option_C_q2), optionButtonA.getId()));
+        preguntas.add(new Pregunta(getString(R.string.question_3), R.drawable.pacific_img, getString(R.string.option_A_q3), getString(R.string.option_B_q3), getString(R.string.option_C_q3), optionButtonA.getId()));
+        preguntas.add(new Pregunta(getString(R.string.question_4), R.drawable.everest_img, getString(R.string.option_A_q4), getString(R.string.option_B_q4), getString(R.string.option_C_q4), optionButtonA.getId()));
+        preguntas.add(new Pregunta(getString(R.string.question_5), R.drawable.asia_img, getString(R.string.option_A_q5), getString(R.string.option_B_q5), getString(R.string.option_C_q5), optionButtonA.getId()));
+        preguntas.add(new Pregunta(getString(R.string.question_6), R.drawable.cameron, getString(R.string.option_A_q6), getString(R.string.option_B_q6), getString(R.string.option_C_q6), optionButtonB.getId()));
 
     }
 
@@ -97,9 +106,11 @@ public class MainActivity extends AppCompatActivity {
 
         if (seleccionado.getId() == idRespuestaCorrecta) {
             showToast("Correcto!");
+            mediaPlayerAcierto.start();
             contadorAciertos++; // Incrementa el contador de aciertos
         } else {
             showToast("Incorrecto");
+            mediaPlayerError.start();
             contadorErrores++; // Incrementa el contador de errores
         }
 

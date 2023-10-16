@@ -1,14 +1,49 @@
 <resources>
-    <string name="app_name">paisesProj</string>
+    <string name="app_name" translatable="false">paisesProj</string>
     <string name="TituloActivityMain">Pregunta2</string>
-    <string name="optionButtonAContent">A</string>
-    <string name="optionButtonBContent">B</string>
-    <string name="optionButtonCContent">C</string>
-    <string name="textViewOptionA">Spain</string>
+    <string name="optionButtonAContent" translatable="false">A</string>
+    <string name="optionButtonBContent" translatable="false">B</string>
+    <string name="optionButtonCContent" translatable="false">C</string>
+    <string name="textViewOptionA" translatable="false">Spain</string>
     <string name="textViewOptionB">Germany</string>
     <string name="textViewOptionC">Japan</string>
     <string name="descripcionimagen">nombre del pais</string>
-    <string name="textviewPreguntaActual">Que pais es este?</string>
-    <string name="textviewResultCorrect">Correcto</string>
-    <string name="textviewResultIncorrect">Incorrecto</string>
+    <string name="textviewPreguntaActual" translatable="false">Que pais es este?</string>
+    <string name="textviewResultCorrect" translatable="false">Correcto</string>
+    <string name="textviewResultIncorrect" translatable="false">Incorrecto</string>
+
+    <string name="question_0" translatable="false">¿Cuál es la Capital de Alemania?</string>
+    <string name="option_A_q0" translatable="false">Munich</string>
+    <string name="option_B_q0" translatable="false">Berlin</string>
+    <string name="option_C_q0" translatable="false">Hamburgo</string>
+
+    <string name="question_1" translatable="false">¿Cuál es la capital de Francia?</string>
+    <string name="option_A_q1" translatable="false">Nantes</string>
+    <string name="option_B_q1" translatable="false">Marsella</string>
+    <string name="option_C_q1" translatable="false">París</string>
+
+    <string name="question_2" translatable="false">¿Cuál es el río más largo del mundo?</string>
+    <string name="option_A_q2" translatable="false">Amazonas</string>
+    <string name="option_B_q2" translatable="false">Nilo</string>
+    <string name="option_C_q2" translatable="false">Misisipi</string>
+
+    <string name="question_3" translatable="false">¿Cuál es el Océano más grande del mundo?</string>
+    <string name="option_A_q3" translatable="false">Océano Pacífico</string>
+    <string name="option_B_q3" translatable="false">Océano Atlántico</string>
+    <string name="option_C_q3" translatable="false">Océano Índico</string>
+
+    <string name="question_4" translatable="false">¿Cuál es el monte más alto del mundo?</string>
+    <string name="option_A_q4" translatable="false">Monte Everest</string>
+    <string name="option_B_q4" translatable="false">Monte Kilimanjaro</string>
+    <string name="option_C_q4" translatable="false">Monte McKinley</string>
+
+    <string name="question_5" translatable="false">¿Cuál es el continente más poblado del mundo?</string>
+    <string name="option_A_q5" translatable="false">Asia</string>
+    <string name="option_B_q5" translatable="false">África</string>
+    <string name="option_C_q5" translatable="false">Europa</string>
+
+    <string name="question_6" translatable="false">"¿Quién es esta actriz?"</string>
+    <string name="option_A_q6" translatable="false">Ana de Armas</string>
+    <string name="option_B_q6" translatable="false">Cameron Diaz</string>
+    <string name="option_C_q6" translatable="false">Margot Robbie</string>
 </resources>

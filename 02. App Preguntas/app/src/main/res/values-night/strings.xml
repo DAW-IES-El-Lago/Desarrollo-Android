@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="TituloActivityMain">Pregunta2</string>
-    <string name="textViewOptionB">Germany</string>
-    <string name="textViewOptionC">Japan</string>
-    <string name="descripcionimagen">nombre del pais</string>
+    <string name="TituloActivityMain" translatable="false">Pregunta2</string>
+    <string name="textViewOptionB" translatable="false">Germany</string>
+    <string name="textViewOptionC" translatable="false">Japan</string>
+    <string name="descripcionimagen" translatable="false">nombre del pais</string>
 </resources>
