@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">ejercicioRepaso</string>
     <string name="tituloApp_content">3 Bien 1 Mal</string>
-    <string name="boton1_content">Siguiente</string>
-    <string name="boton2_content">Finalizar</string>
+    <string name="boton1_content">Avanzar ⏩</string>
+    <string name="boton2_content">⏪ Retroceder</string>
+    <string name="boton3_content">Finalizar ❌</string>
+    <string name="texto_aciertos">Aciertos totales: </string>
+    <string name="texto_fallos">Fallos totales: </string>
 </resources>
