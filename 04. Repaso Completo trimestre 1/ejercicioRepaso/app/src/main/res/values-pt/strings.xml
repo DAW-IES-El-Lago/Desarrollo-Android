@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ejercicioRepaso</string>
+    <string name="tituloApp_content">3 Bie 1 Ma</string>
+    <string name="boton1_content">Avance</string>
+    <string name="boton2_content">Regrese</string>
+    <string name="boton3_content">Finale</string>
+    <string name="texto_aciertos">Verdadero</string>
+    <string name="texto_fallos">Fallo</string>
+</resources>
