@@ -1,6 +1,7 @@
 package com.example.ejerciciorepaso;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +18,11 @@ public class PantallaFinal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_final);
 
+        // Configurar la toolbar
+        Toolbar toolbar = findViewById(R.id.toolbarFinal);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Menu de Navegacion");
 
         //Iniciar las vistas
         textAciertos = findViewById(R.id.textViewAciertos);
@@ -31,6 +37,7 @@ public class PantallaFinal extends AppCompatActivity {
             Toast.makeText(PantallaFinal.this, "Datos recuperados correctamente", Toast.LENGTH_SHORT).show();
 
             //pintar aciertos y fallos en la pantalla final
+            //String stringAciertos = "Aciertos: " + intent.getStringExtra(EXTRA_MESSAGE);
             String stringAciertos = "Aciertos: " + String.valueOf(aciertos);
             String stringFallos = "Fallos: " + String.valueOf(fallos);
 

@@ -1,7 +1,10 @@
 package com.example.ejerciciorepaso;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,15 +14,19 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String EXTRA_MESSAGE = "com.example.ejerciciorepaso.ACIERTOSFALLOS";
     private TextView titulo;
     private ImageView imagen1, imagen2, imagen3, imagen4;
     private Button botonAvanzar, botonRetroceder, botonFinalizar;
     private int index = 0; // Declarar la variable index fuera de onCreate
     private int aciertos = 0, fallos = 0;
+
 
 
     @Override
@@ -36,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
         botonAvanzar = findViewById(R.id.boton1);
         botonRetroceder = findViewById(R.id.boton2);
         botonFinalizar = findViewById(R.id.boton3);
+
+        //Configurar la toolbar
+        Toolbar toolbar = findViewById(R.id.appBar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Menu de Navegacion");
+
 
         // Crear preguntas con su constructor
         Pregunta p1 = new Pregunta(R.drawable.coche1, R.drawable.coche2, R.drawable.coche3, R.drawable.burro, R.drawable.burro);
@@ -77,9 +91,12 @@ public class MainActivity extends AppCompatActivity {
 
         botonFinalizar.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, PantallaFinal.class);
+            String aciertoString = String.valueOf(aciertos);
+            intent.putExtra(EXTRA_MESSAGE, aciertoString);
             intent.putExtra("aciertos", aciertos);
             intent.putExtra("fallos", fallos);
             startActivity(intent);
+
         });
 
         Log.i("depuranding", "Valor de índice fuera: " + index);
