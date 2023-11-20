@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ExamenAndroidMelakuGarcia</string>
+    <string name="contro_aforos">CONTROL AFORO</string>
+    <string name="sumarGeneral">+😄</string>
+    <string name="sumarSalon">+💚</string>
+    <string name="restarSalon">-🖤</string>
+    <string name="restarGeneral">-😭</string>
+    <string name="GeneralTextinitial">General: 0</string>
+    <string name="salonTextinitial">Salon: 0</string>
+    <string name="finalizartext">Finalizar</string>
+    <string name="totalTextInitial">total: 0</string>
+    <string name="general">General</string>
+    <string name="salon">Salon</string>
+    <string name="total">total</string>
+
+</resources>
