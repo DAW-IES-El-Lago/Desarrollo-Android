@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">CardViewProject</string>
+    <string name="tv_titulo">MULTIMEDIA APP</string>
+    <!-- Pregunta 1 -->
+    <string name="tv1_pregunta">Listado de Libros</string>
+    <string name="bt1_carta1">LISTA</string>
+    <!-- Pregunta 2 -->
+    <string name="tv2_pregunta">Reproductor de Video</string>
+    <string name="bt1_carta2">VIDEO</string>
+    <!-- Pregunta 3 -->
+    <string name="tv3_pregunta">Reproductor de Musica</string>
+    <string name="bt1_carta3">ESCUCHAR</string>
+    <!-- Pregunta 4 -->
+    <string name="tv4_pregunta">Lista de canciones</string>
+    <string name="bt1_carta4">CANCIONES</string>
+
+    <!-- Canciones -->
+    <string name="tv_cancion">Michael Jackson - Smooth Criminal</string>
+    <string name="cancion1">HOBA HOBA SPIRIT WALKE CHAREB</string>
+    <string name="cancion2">Led Zeppelin - Whole Lotta Love</string>
+    <string name="cancion3">Michael Jackson - Smooth Criminal</string>
+</resources>

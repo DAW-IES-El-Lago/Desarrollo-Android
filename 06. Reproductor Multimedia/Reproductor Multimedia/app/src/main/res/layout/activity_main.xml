@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="410dp"
+        android:layout_height="607dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.908">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingBottom="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="320dp"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#89D60B"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv1_pregunta"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="@string/tv1_pregunta"
+                        android:textAllCaps="true"
+                        android:textColor="#FFFFFF" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv1"
+                            android:layout_width="142dp"
+                            android:layout_height="79dp"
+                            android:layout_weight="1"
+                            android:paddingBottom="6dp"
+                            android:src="@drawable/img1" />
+
+                        <Button
+                            android:id="@+id/btn_1"
+                            android:layout_width="135dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="12dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/bt1_carta1"
+                            app:cornerRadius="20dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingBottom="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="320dp"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#DF61C0"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv2_pregunta"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="@string/tv2_pregunta"
+                        android:textAllCaps="true"
+                        android:textColor="#FFFFFF" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv2"
+                            android:layout_width="142dp"
+                            android:layout_height="79dp"
+                            android:layout_weight="1"
+                            android:paddingBottom="6dp"
+                            app:srcCompat="@drawable/video" />
+
+                        <Button
+                            android:id="@+id/btn_2"
+                            android:layout_width="135dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="12dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/bt1_carta2" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingBottom="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="320dp"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#4A82F1"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv3_pregunta"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="@string/tv3_pregunta"
+                        android:textAllCaps="true"
+                        android:textColor="#FFFFFF" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv3"
+                            android:layout_width="142dp"
+                            android:layout_height="79dp"
+                            android:layout_weight="1"
+                            android:paddingBottom="6dp"
+                            app:srcCompat="@drawable/notamusical" />
+
+                        <Button
+                            android:id="@+id/btn_3"
+                            android:layout_width="135dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="12dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/bt1_carta3" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="117dp"
+            android:gravity="center">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="320dp"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#E47D22"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv4_pregunta"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="@string/tv4_pregunta"
+                        android:textAllCaps="true"
+                        android:textColor="#FFFFFF" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv4"
+                            android:layout_width="142dp"
+                            android:layout_height="79dp"
+                            android:layout_weight="1"
+                            android:paddingBottom="6dp"
+                            app:srcCompat="@drawable/ubicacion" />
+
+                        <Button
+                            android:id="@+id/btn_4"
+                            android:layout_width="135dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="12dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/bt1_carta4" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="322dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginEnd="177dp"
+        android:text="@string/tv_titulo"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#171717"
+    tools:context=".MainActivity5">
+
+    <ImageView
+        android:id="@+id/iv_cancion"
+        android:layout_width="305dp"
+        android:layout_height="339dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.155"
+        app:srcCompat="@drawable/mj_smoothcriminal" />
+
+    <LinearLayout
+        android:id="@+id/layoutLinear"
+        android:layout_width="348dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="9dp"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.849">
+
+        <ImageView
+            android:id="@+id/bt_pausa"
+            android:layout_width="77dp"
+            android:layout_height="45dp"
+            android:paddingRight="25dp"
+            app:srcCompat="@drawable/detener" />
+
+        <ImageView
+            android:id="@+id/btnCancionAtras"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            app:srcCompat="@drawable/anterior" />
+
+        <ImageView
+            android:id="@+id/btnIniciar"
+            android:layout_width="97dp"
+            android:layout_height="53dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:srcCompat="@drawable/reproducir" />
+
+        <ImageView
+            android:id="@+id/btnCancionAlante"
+            android:layout_width="52dp"
+            android:layout_height="46dp"
+            app:srcCompat="@drawable/siguiente" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_tituloCancion"
+        android:layout_width="298dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginEnd="175dp"
+        android:gravity="center"
+        android:text="@string/tv_cancion"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.742" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="265dp"
+        android:layout_height="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <TextView
+        android:id="@+id/posicionCancion"
+        android:layout_width="56dp"
+        android:layout_height="30dp"
+        android:text="Prev"
+        android:textColor="#D3D3D3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.616" />
+
+    <TextView
+        android:id="@+id/duracion"
+        android:layout_width="56dp"
+        android:layout_height="30dp"
+        android:text="Next"
+        android:textColor="#D3D3D3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.991"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.616" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
